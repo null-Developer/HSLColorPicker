@@ -567,8 +567,8 @@ public final class MathUtils {
      * @param outRangeEnd Output range end
      * @param value Value to map
      * @return Mapped value. Values outside of the input range are not clamped to output range */
-    static public float map (float inRangeStart, float inRangeEnd, float outRangeStart, float outRangeEnd, float value) {
-        return outRangeStart + (value - inRangeStart) * (outRangeEnd - outRangeStart) / (inRangeEnd - inRangeStart);
+    public static float map(float value, float iStart, float iStop, float oStart, float oStop) {
+        return oStart + (oStop - oStart) * ((value - iStart) / (iStop - iStart));
     }
 
     /** Linearly interpolates between two angles in radians. Takes into account that angles wrap at two pi and always takes the

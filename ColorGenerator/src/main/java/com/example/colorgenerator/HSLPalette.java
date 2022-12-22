@@ -33,7 +33,7 @@ public class HSLPalette {
             double g2 = ((color >> 8) & 0xFF) / 255.0;
             double b2 = (color & 0xFF) / 255.0;
             double d = Math.sqrt((r2 - r1) * 0.3) + Math.sqrt((g2 - g1) * 0.59) + Math.sqrt((b2 - b1) * 0.11);
-            if (d < closestDist) {
+            if (d <= closestDist) {
                 closestDist = d;
                 closestHSL = hsl;
             }
